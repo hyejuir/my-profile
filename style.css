@@ -1,0 +1,585 @@
+/* =========================
+   BRAND COLORS & VARIABLES
+========================= */
+
+:root {
+  --yellow: #cfc477;
+  --brown: #4b1f1b;
+  --pink: #efbfcb;
+  --off-white: #f5f3ef;
+  --black: #171717;
+
+  --font-heading: "Anton", sans-serif;
+  --font-body: "DM Sans", sans-serif;
+}
+
+/* =========================
+   RESET & BASE STYLES
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--off-white);
+  color: var(--brown);
+  overflow-x: hidden;
+}
+
+img,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  color: var(--brown);
+  font-weight: 400;
+}
+
+p {
+  font-family: var(--font-body);
+}
+
+/* =========================
+   HERO / HEADER
+========================= */
+
+.hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Name */
+
+.hero-name {
+  position: absolute;
+  top: 16%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 90%;
+  text-align: center;
+
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 6.7vw, 6rem);
+  color: var(--brown);
+
+  white-space: nowrap;
+  z-index: 2;
+}
+
+/* Tagline */
+
+.hero-tagline {
+  position: absolute;
+  top: 73%;
+  left: 8%;
+
+  width: 30%;
+  text-align: center;
+
+  font-size: clamp(0.7rem, 2.2vw, 2rem);
+  line-height: 1.5;
+
+  color: var(--brown);
+  z-index: 2;
+}
+
+/* =========================
+   ABOUT ME SECTION
+========================= */
+
+.about-section {
+  width: 100%;
+  background-color: var(--off-white);
+
+  padding: 4% 5%;
+}
+
+.about-card {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+
+  background-color: var(--pink);
+
+  border-radius: 2.5rem;
+
+  min-height: 250px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 2fr;
+
+  align-items: center;
+  justify-items: center;
+
+  padding: 2.5rem;
+}
+
+/* Decorative Star */
+
+.about-star {
+  font-size: clamp(4rem, 8vw, 9rem);
+  color: var(--yellow);
+  line-height: 1;
+}
+
+/* About Heading */
+
+.about-card h2 {
+  font-size: clamp(2rem, 4vw, 4.5rem);
+  text-align: center;
+  line-height: 1.3;
+}
+
+/* About Paragraph */
+
+.about-card p {
+  width: 90%;
+
+  text-align: center;
+
+  font-size: clamp(1rem, 1.7vw, 1.6rem);
+  line-height: 1.5;
+
+  color: var(--black);
+}
+
+/* =========================
+   THINGS I LOVE SECTION
+========================= */
+
+.love-section {
+  width: 100%;
+
+  background: radial-gradient(
+    ellipse at center,
+    var(--off-white) 0%,
+    var(--yellow) 75%
+  );
+
+  padding: 3rem 5%;
+  text-align: center;
+}
+
+/* Section Heading */
+
+.love-section h2 {
+  font-size: clamp(2rem, 4vw, 4rem);
+  margin-bottom: 3rem;
+}
+
+/* Love List */
+
+.love-list {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: space-around;
+  align-items: center;
+
+  gap: 1.5rem;
+}
+
+/* Individual Items */
+
+.love-item {
+  flex: 1 1 18%;
+
+  min-width: 140px;
+
+  background-color: var(--pink);
+
+  padding: 1rem 1.5rem;
+
+  border-radius: 0.5rem;
+
+  color: var(--brown);
+
+  font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+
+  transition: transform 0.3s ease;
+}
+
+.love-item:hover {
+  transform: translateY(-5px);
+}
+
+/* =========================
+   PASSION PROJECTS SECTION
+========================= */
+
+.projects-section {
+  width: 100%;
+
+  background-color: var(--off-white);
+
+  padding: 5rem 5%;
+}
+
+/* Projects Heading */
+
+.projects-heading {
+  position: relative;
+
+  width: 100%;
+
+  margin: 0 auto 4rem;
+
+  text-align: center;
+}
+
+.projects-heading h2 {
+  display: inline-block;
+
+  font-size: clamp(2rem, 4.5vw, 4.5rem);
+
+  line-height: 1.4;
+
+  text-decoration: underline;
+  text-decoration-thickness: 0.1rem;
+  text-underline-offset: 0.2em;
+}
+
+/* Decorative Stars */
+
+.project-star {
+  position: absolute;
+
+  color: var(--yellow);
+
+  font-size: clamp(3rem, 6vw, 6rem);
+
+  line-height: 1;
+}
+
+.star-left {
+  left: 5%;
+  top: 50%;
+}
+
+.star-right {
+  right: 5%;
+  top: 0;
+}
+
+/* Project Grid */
+
+.projects-grid {
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 2rem;
+}
+
+/* Individual Project Card */
+
+.project-card {
+  background-color: var(--pink);
+
+  padding: 2rem;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 1.5rem;
+}
+
+/* Project Media */
+
+.project-media {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: var(--black);
+  overflow: hidden;
+}
+
+.project-media img,
+.project-media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.project-card:first-child .project-media img {
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+/* Project Titles */
+
+.project-card h3 {
+  font-size: clamp(1rem, 1.8vw, 1.5rem);
+
+  line-height: 1.5;
+
+  text-align: center;
+}
+
+/* Project Description */
+
+.project-card p {
+  color: var(--black);
+
+  font-size: clamp(0.8rem, 1.1vw, 1rem);
+
+  line-height: 1.5;
+
+  text-align: center;
+}
+
+/* =========================
+   FOOTER / CONTACT
+========================= */
+
+footer {
+  width: 100%;
+  margin-top: auto;
+}
+
+.site-footer {
+  padding: 2rem 5%;
+
+  background-color: var(--pink);
+
+  text-align: center;
+}
+
+.site-footer h2 {
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+
+  margin-bottom: 1.5rem;
+}
+
+.foot-details {
+  display: flex;
+
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  gap: 1rem 3rem;
+
+  justify-content: space-around;
+  align-items: center;
+}
+
+.foot-details p {
+  font-size: clamp(0.8rem, 1.4vw, 1.2rem);
+  color: var(--brown);
+}
+
+.foot-details a {
+  color: var(--brown);
+
+  text-decoration: none;
+
+  transition: opacity 0.3s ease;
+}
+
+.foot-details a:hover {
+  opacity: 0.65;
+  text-decoration: underline;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .about-card {
+    grid-template-columns: 0.7fr 1fr 2fr;
+
+    padding: 2rem;
+    min-height: 200px;
+  }
+
+  .projects-grid {
+    gap: 1rem;
+  }
+
+  .project-card {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .projects-heading {
+    margin-bottom: 3rem;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  /* Hero */
+
+  .hero-name {
+    font-size: clamp(1.3rem, 6vw, 2.5rem);
+    width: 100%;
+  }
+
+  .hero-tagline {
+    font-size: clamp(0.6rem, 2.5vw, 1rem);
+    width: 35%;
+    left: 5%;
+  }
+
+  /* About */
+
+  .about-section {
+    padding: 1.5rem 5%;
+  }
+
+  .about-card {
+    grid-template-columns: 1fr;
+
+    gap: 1rem;
+
+    padding: 1.5rem;
+
+    min-height: auto;
+
+    border-radius: 1.5rem;
+  }
+
+  .about-star {
+    font-size: 3.5rem;
+  }
+
+  .about-card h2 {
+    font-size: 2rem;
+  }
+
+  .about-card p {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  /* Things I Love */
+
+  .love-section {
+    padding: 2rem 5%;
+  }
+
+  .love-section h2 {
+    margin-bottom: 2rem;
+  }
+
+  .love-list {
+    gap: 0.75rem;
+  }
+
+  .love-item {
+    flex: 1 1 40%;
+    min-width: 0;
+
+    padding: 0.75rem;
+  }
+
+  /* Projects */
+
+  .projects-section {
+    padding: 3rem 5%;
+  }
+
+  .projects-heading {
+    margin-bottom: 2rem;
+  }
+
+  .projects-heading h2 {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+  }
+
+  .project-star {
+    font-size: 2rem;
+  }
+
+  .star-left {
+    left: 0;
+    top: 100%;
+  }
+
+  .star-right {
+    right: 0;
+    top: -20%;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    padding: 1.5rem;
+
+    gap: 1rem;
+  }
+
+  .project-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .project-card p {
+    font-size: 0.9rem;
+  }
+
+  /* Footer */
+
+  .site-footer {
+    padding: 1.5rem 1rem;
+  }
+
+  .foot-details {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
